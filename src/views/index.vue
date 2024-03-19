@@ -2,12 +2,15 @@
 import List from "@/components/List.vue";
 import NewNote from "@/components/NewNote.vue";
 import useStore from "@/stores";
+import {useTitle} from "@vueuse/core";
 
 const store = useStore();
 
 const newNote = () => {
   store.createNote();
 }
+
+useTitle("Заметки")
 </script>
 
 <template>
